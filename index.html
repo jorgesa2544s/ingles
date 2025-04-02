@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mi Página Web</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elian's Adventure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            color: #1e90ff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-top: 20px;
+            text-align: justify;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Bienvenido a Mi Página Web</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#about">Acerca de</a></li>
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="container">
+        <h1>Elian's Adventure</h1>
+        <img src="https://us.123rf.com/450wm/topvectors/topvectors2110/topvectors211000296/175646589-cazador-del-tesoro-del-hombre-que-encuentra-el-cofre-con-la-ilustraci%C3%B3n-del-vector-de-la-joya.jpg" alt="Treasure Hunter">
+        <p id="story"></p>
+        <div class="footer">
+            Created by Jorge Salvo, Annais Aguilera, and Mauricio Diaz<br>
+            For Professor Barbara Jara, English Project
+        </div>
+    </div>
+    
+    <script>
+        const story = `The adventurer named Elian is searching for a location that sparks his curiosity, as he only found a piece of paper with coordinates, but they were incomplete.
+        
+        It all began on his family’s farm. While digging to install a new animal pen, his shovel struck an old piece of paper with incomplete coordinates. Intrigued, he decided to seek answers.
+        
+        Asking around the village, he met Lucio, a smart young man who had the other half of the paper. Lucio explained that he had found the fragment in the forest years ago but never knew its meaning. When they put the pieces together, they discovered that the coordinates pointed to a deep part of the forest. Without hesitation, they set off on their adventure.
+        
+        The journey was not easy. They pushed through dense trees, crossed a stream, and navigated treacherous roots. Along the way, they found old markings on tree trunks, as if someone had passed through before. After hours of exploration, they arrived at an ancient oak tree where they found a rusty metal box buried among the roots.
+        
+        With effort, they opened it and found a letter and a medallion with strange symbols inside. The letter spoke of an explorer who had hidden a treasure in the forest, leaving clues for the brave who dared to search for it.
+        
+        Elian and Lucio exchanged excited glances. Now they had a new mission: to uncover the true meaning of the medallion and unearth the mystery hidden in the forest. The real adventure was just beginning.`;
 
-  <section id="home">
-    <h2>Inicio</h2>
-    <p>Este es el inicio de nuestra página web. Aquí puedes encontrar información importante sobre nosotros.</p>
-  </section>
-
-  <section id="about">
-    <h2>Acerca de</h2>
-    <p>Somos una empresa dedicada a ofrecer servicios de alta calidad. Con años de experiencia, nos enfocamos en brindar soluciones personalizadas a nuestros clientes.</p>
-  </section>
-
-  <section id="services">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Diseño web</li>
-      <li>Desarrollo de aplicaciones móviles</li>
-      <li>Consultoría tecnológica</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contacto</h2>
-    <p>Si tienes alguna pregunta o inquietud, no dudes en contactarnos.</p>
-    <form>
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Mensaje:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
-  </footer>
+        document.getElementById("story").innerText = story;
+    </script>
 </body>
 </html>
